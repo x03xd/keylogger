@@ -7,11 +7,15 @@ set LDFLAGS=-lws2_32
 set OUT=main.exe
 
 :: Compile syscalls.asm to syscalls.obj using NASM
-echo [*] Compiling syscalls.asm...
-nasm -f win64 asm\syscalls.asm -o asm\syscalls.obj
-if errorlevel 1 (
-    echo [!] Error while compiling syscalls.asm
-    goto end
+if exist asm\syscalls.obj (
+    echo [*] syscalls.obj already exists. Skipping NASM compilation.
+) else (
+    echo [*] Compiling syscalls.asm...
+    nasm -f win64 asm\syscalls.asm -o asm\syscalls.obj
+    if errorlevel 1 (
+        echo [!] Error while compiling syscalls.asm
+        goto end
+    )
 )
 
 :: List of source files
