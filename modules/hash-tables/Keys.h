@@ -1,8 +1,6 @@
 #ifndef KEYS_H
 #define KEYS_H
 
-#include <stdlib.h>
-#include <string.h>
 
 #define KEYS_SIZE 142
 

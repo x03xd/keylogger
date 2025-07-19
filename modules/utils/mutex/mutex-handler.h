@@ -1,9 +1,9 @@
 #ifndef MUTEX_HANDLER_H
 #define MUTEX_HANDLER_H
-
 #define STATUS_SUCCESS (NTSTATUS)0x00000000L
 
 #include <windows.h>
+
 
 extern NTSTATUS NtWaitForSingleObject(
     _In_ HANDLE Handle,

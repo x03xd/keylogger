@@ -3,6 +3,7 @@
 
 #include "include/shared.h"
 
+
 /**
  * @brief Checks if the given single-character string matches any of a predefined set of special characters.
  *

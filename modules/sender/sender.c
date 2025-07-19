@@ -1,10 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#include <windows.h>
-#include <stdint.h>
 #include "sender/sender.h"
 #include "utils/mutex/mutex-handler.h"
 

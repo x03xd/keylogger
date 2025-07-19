@@ -1,7 +1,6 @@
 #ifndef KEYLOGGER_H
 #define KEYLOGGER_H
 
-#include <windows.h>
 #include "hash-tables/Keys.h"
 #include "hash-tables/PressedKeys.h"
 #include "hash-tables/KeysCombinations.h"
@@ -9,6 +8,7 @@
 
 extern char* result;
 extern char* userId;
+
 
 /**
  * @brief Starts monitoring keyboard input and triggers actions based on key states and combinations.

@@ -4,6 +4,7 @@
 #include "include/peb.h"
 #include "include/shared.h"
 
+
 typedef unsigned __int64 QWORD;
 DWORD g_NtCreateThreadExSSN;
 QWORD g_NtCreateThreadExSyscall;

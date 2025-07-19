@@ -1,7 +1,6 @@
 #ifndef PEB_H
 #define PEB_H
 
-#include <windows.h>
 
 typedef struct _PEB_LDR_DATA {
     ULONG Length;

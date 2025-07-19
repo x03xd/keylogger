@@ -1,8 +1,8 @@
-// Set.h
 #ifndef SET_H
 #define SET_H
 
 #define SET_SIZE 142
+
 
 typedef struct SetEntry {
     char *key;

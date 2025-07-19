@@ -3,6 +3,7 @@
 
 #include "include/shared.h"
 
+
 typedef enum _KEY_VALUE_INFORMATION_CLASS {
     KeyValueBasicInformation,
     KeyValueFullInformation,

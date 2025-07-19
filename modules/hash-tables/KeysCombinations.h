@@ -1,8 +1,6 @@
 #ifndef KEYS_COMBINATIONS_H
 #define KEYS_COMBINATIONS_H
 
-#include <stdlib.h>
-#include <string.h>
 
 #define COMBINATIONS_KEYS_SIZE 21
 

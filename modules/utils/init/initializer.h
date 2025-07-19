@@ -7,6 +7,7 @@
 #include "hash-tables/PressedKeys.h"
 #include "sets/Set.h"
 
+
 typedef struct {
     KeysCombinations* combinations;
     PressedKeys* pressedKeys;

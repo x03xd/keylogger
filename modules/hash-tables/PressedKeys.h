@@ -1,8 +1,6 @@
 #ifndef PRESSED_KEYS_H
 #define PRESSED_KEYS_H
 
-#include <stdlib.h>
-#include <string.h>
 
 #define PRESSED_KEYS_SIZE 142
 

@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "hash-tables/KeysCombinations.h"
 #include "utils/common/utils.h"
 
