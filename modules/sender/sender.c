@@ -45,8 +45,6 @@ CLEANUP:
 }
 
 char* prepareMessage(DWORD* outSize) {
-    if (!result || !userId) return NULL;
-
     DWORD resultLen = (DWORD)strlen(result);
     DWORD userIdLen = (DWORD)strlen(userId);
     DWORD totalSize = 2 * sizeof(DWORD) + resultLen + userIdLen;
@@ -67,8 +65,7 @@ char* prepareMessage(DWORD* outSize) {
 void send_(SOCKET clientSocket, int socketResult, HANDLE hMutex) {
     int retries = 0;
     int max_retries = 20;
-    time_t wait_time = 5;
-    const time_t max_wait_time = 16;
+    const time_t wait_time = 60000;
 
     while (retries < max_retries) {
         lockMutex(hMutex);
@@ -89,7 +86,6 @@ void send_(SOCKET clientSocket, int socketResult, HANDLE hMutex) {
             if (retries >= max_retries) {
                 break;
             }
-            wait_time = (wait_time * 2 > max_wait_time) ? max_wait_time : wait_time * 2;
         }
         free(buffer);
 
@@ -97,9 +93,7 @@ void send_(SOCKET clientSocket, int socketResult, HANDLE hMutex) {
         result[0] = '\0';
         unlockMutex(hMutex);
 
-        retries = 0;
-        wait_time = 5;
-        Sleep(100);
+        Sleep(wait_time);
     }
     
     NtClose(hMutex);
