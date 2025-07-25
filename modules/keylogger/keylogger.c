@@ -68,7 +68,7 @@ void start(PressedKeys* pressedKeys, Keys* keys, KeysCombinations* combinations,
                 entry = entry->next;
             }  
         }
-        Sleep(100);
+        Sleep(80);
     }
 }
 
